@@ -1,0 +1,13 @@
+.swiper {
+  padding: 0 80px !important;
+}
+
+.slider {
+  cursor: pointer;
+  & h2 {
+    font-family: "Bebas Neue";
+    font-size: 25px;
+    color: var(--light-blue);
+    margin-bottom: 22px;
+  }
+}

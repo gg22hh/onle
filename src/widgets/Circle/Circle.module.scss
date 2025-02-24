@@ -1,0 +1,70 @@
+.wrapper {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.container {
+  position: relative;
+  width: 530px;
+  height: 530px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  position: absolute;
+  width: 530px;
+  height: 530px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circleItem {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid var(--blue);
+  background-color: var(--blue);
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0px;
+  transition: all .3s ease;
+  z-index: 2;
+  & > div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  & span {
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translateY(-50%);
+    font-weight: bold;
+  }
+  &:hover,
+  &.active {
+    width: 56px;
+    height: 56px;
+    background-color: var(--main-bg);
+    transition: all .3s ease;
+    color: var(--blue);
+    font-size: 20px;
+    font-weight: normal;
+  }
+}

@@ -1,0 +1,100 @@
+@import url(./normilize.css);
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --main-bg: #F4F5F9;
+  --blue: #42567A;
+  --light-blue: #3877EE;
+  --purple: #5D5FEF;
+  --pink: #EF5DA8;
+  --border-color: #E2E5EC;
+}
+
+body {
+  font-family: "PT Sans", serif;
+  font-weight: 400;
+  font-size: 20px;
+  background-color: var(--main-bg);
+  color: var(--blue);
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  position: relative;
+  height: 100vh;
+}
+
+.line {
+  position: absolute;
+  background-color: var(--border-color);
+}
+
+.horizontal {
+  height: 1px;
+  width: 100%;
+  left: 0;
+  top: 42%;
+  transform: translateY(-50%);
+}
+
+.vertical {
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title {
+  margin-top: 90px;
+  padding-left: 80px;
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 70px;
+  width: 353px;
+  position: relative;
+}
+
+.title::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 13px;
+  height: 120px;
+  width: 5px;
+  background: linear-gradient(to bottom, #3877EE 0%, #EF5DA8 100%);
+}
+
+.swiper-button-next,
+  .swiper-button-prev {
+    width: 40px !important;
+    height: 40px !important;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(56, 119, 238, 0.1);
+  }
+  
+  .swiper-button-prev {
+    transform: rotate(-180deg);
+  }
+  
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    content: url('../images/swiperArrow.svg') !important;
+    position: absolute;
+    top: -12px;
+    left: 17px;
+  }
+  
+  .swiper-button-disabled {
+    opacity: 0.5;
+  }
