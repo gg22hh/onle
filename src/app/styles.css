@@ -19,8 +19,6 @@ body {
 }
 
 #root {
-  display: flex;
-  justify-content: center;
   margin-left: 10%;
 }
 
@@ -55,7 +53,7 @@ body {
 }
 
 .title {
-  margin-top: 90px;
+  padding-top: 90px;
   padding-left: 80px;
   font-size: 56px;
   font-weight: bold;
@@ -68,7 +66,7 @@ body {
   content: '';
   position: absolute;
   left: -1px;
-  top: 13px;
+  top: 103px;
   height: 120px;
   width: 5px;
   background: linear-gradient(to bottom, #3877EE 0%, #EF5DA8 100%);
@@ -98,3 +96,29 @@ body {
   .swiper-button-disabled {
     opacity: 0.5;
   }
+@media (max-width: 1123px) {
+  .title {
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #root {
+    margin-left: 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .title {
+    padding: 60px 0 0;
+    font-size: 20px;
+    max-width: 130px;
+    line-height: 30px;
+  }
+
+  .title::before {
+    content: none;
+  }
+}

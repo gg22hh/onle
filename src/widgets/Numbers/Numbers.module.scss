@@ -16,3 +16,16 @@
     color: var(--pink);
   }
 }
+
+@media (max-width: 1123px) {
+  .numbers {
+    font-size: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .numbers {
+    font-size: 56px;
+    gap: 20px;
+  }
+}
